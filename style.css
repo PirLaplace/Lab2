@@ -1,0 +1,74 @@
+.traffic-lights-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.traffic-light {
+    width: 100px;
+    height: 300px;
+    background: #333;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.light {
+    width: 60px;
+    height: 60px;
+    background: #888;
+    border-radius: 50%;
+}
+
+.red {
+    background: red;
+}
+
+.yellow {
+    background: yellow;
+}
+
+.green {
+    background: green;
+}
+
+/* Варіант за допомогою position */
+.position .light {
+    position: absolute;
+}
+
+.position .red {
+    top: 20px;
+}
+
+.position .yellow {
+    top: 120px;
+}
+
+.position .green {
+    top: 220px;
+}
+
+/* Варіант за допомогою transform */
+.transform .light {
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+.transform .red {
+    background: red;
+}
+
+.transform .yellow {
+    background: yellow;
+}
+
+.transform .green {
+    background: green;
+}
+
+.transform .light.active {
+    transform: scale(1.1);
+}
